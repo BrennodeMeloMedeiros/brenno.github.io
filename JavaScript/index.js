@@ -41,9 +41,8 @@ languageButton.addEventListener('click', ()=>{
 
 const boxes = document.querySelectorAll('article.Box');
 
-
 boxes.forEach((box)=>{
-    box.addEventListener('mouseover', ()=>{
-        box.style.backgroundColor = "tomato"
+    box.addEventListener('focusout', ()=>{
+        box.classList.add("Open");
     })
 })

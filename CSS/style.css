@@ -8,6 +8,16 @@ html, body {
   height: 100%;
   margin: 0;
   background-color: #fff;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+  background: #414141;
+}
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+  background: #000;
 }
 
 .green {
@@ -26,7 +36,7 @@ header {
   top: 0;
   width: 100%;
   height: 50px;
-  position: fixed;
+  position: sticky;
   background: #000;
   display: flex;
   justify-content: space-around;
@@ -93,7 +103,6 @@ main {
   padding: 15px;
   height: 100%;
   width: 100%;
-  margin-top: 50px;
 }
 main .fullRow {
   width: 100%;
@@ -101,6 +110,7 @@ main .fullRow {
   margin-bottom: 40px;
 }
 main .fullRow p {
+  font-size: 1.4vw;
   width: 90%;
   margin: auto;
 }
@@ -152,11 +162,14 @@ main .fullRow#introduction label#LanguageButton.PT-BR::before {
   color: #fff;
 }
 main .fullRow#introduction h1 {
-  font-size: 4rem;
+  font-size: 6vw;
   margin: 0;
 }
 main .fullRow#introduction h5 {
   margin-top: 0;
+}
+main .fullRow#introduction h2 {
+  font-size: 2vw;
 }
 main .fullRow#introduction h1, main .fullRow#introduction h2, main .fullRow#introduction h3, main .fullRow#introduction h4, main .fullRow#introduction h5 {
   width: max-content;
@@ -170,19 +183,19 @@ main .fullRow .Flex {
   flex-wrap: wrap;
 }
 main .fullRow .Flex .Box {
-  width: 350px;
+  width: 45%;
   height: 290px;
   border-radius: 12px;
   transition: 0.5s;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #414141;
 }
 main .fullRow .Flex .Box img {
-  width: 210px;
-  margin: 40px;
+  width: 40%;
+  margin: 20px;
 }
 main .fullRow .Flex .Box h1 {
   font-weight: bold;
@@ -190,8 +203,13 @@ main .fullRow .Flex .Box h1 {
   margin: 10px 0px;
   color: #fff;
 }
-main .fullRow .Flex .Box:hover {
-  height: auto;
+main .fullRow .Flex .Box p, main .fullRow .Flex .Box ul, main .fullRow .Flex .Box li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+main .fullRow .Flex .Box li::before {
+  content: "-";
 }
 
 /*# sourceMappingURL=style.css.map */
