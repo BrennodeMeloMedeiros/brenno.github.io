@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -110,7 +111,7 @@ main .fullRow {
   margin-bottom: 40px;
 }
 main .fullRow p {
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   width: 90%;
   margin: auto;
 }
@@ -169,47 +170,114 @@ main .fullRow#introduction h5 {
   margin-top: 0;
 }
 main .fullRow#introduction h2 {
-  font-size: 2vw;
+  font-size: 1.9vw;
 }
 main .fullRow#introduction h1, main .fullRow#introduction h2, main .fullRow#introduction h3, main .fullRow#introduction h4, main .fullRow#introduction h5 {
   width: max-content;
   color: #000;
   font-weight: normal;
 }
-main .fullRow .Flex {
+main .fullRow #TecBody {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
 }
-main .fullRow .Flex .Box {
-  width: 45%;
-  height: 290px;
-  border-radius: 12px;
-  transition: 0.5s;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  background-color: #414141;
+main .fullRow #TecBody #Front-End, main .fullRow #TecBody #Back-End {
+  width: 50%;
+  height: 100%;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
 }
-main .fullRow .Flex .Box img {
-  width: 40%;
-  margin: 20px;
+main .fullRow #TecBody #Front-End h4, main .fullRow #TecBody #Back-End h4 {
+  margin: 0;
 }
-main .fullRow .Flex .Box h1 {
+main .fullRow #TecBody #Front-End .row, main .fullRow #TecBody #Back-End .row {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+}
+main .fullRow #TecBody #Front-End .row.title, main .fullRow #TecBody #Back-End .row.title {
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
-  font-size: 2rem;
-  margin: 10px 0px;
-  color: #fff;
+  font-size: calc(1.9vw + 1rem);
 }
-main .fullRow .Flex .Box p, main .fullRow .Flex .Box ul, main .fullRow .Flex .Box li {
-  display: inline-block;
+main .fullRow #TecBody #Front-End .teclist, main .fullRow #TecBody #Back-End .teclist {
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .fullRow #TecBody #Front-End .teclist > section, main .fullRow #TecBody #Back-End .teclist > section {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .fullRow #TecBody #Front-End .teclist > section h4, main .fullRow #TecBody #Back-End .teclist > section h4 {
+  color: #a87b50;
+  font-weight: bold;
+  font-size: 1.9vw;
+  margin-bottom: 15px;
+}
+main .fullRow #TecBody #Front-End .teclist > section ul, main .fullRow #TecBody #Back-End .teclist > section ul {
+  list-style: none;
+  display: none;
   margin: 0;
   padding: 0;
 }
-main .fullRow .Flex .Box li::before {
-  content: "-";
+main .fullRow #TecBody #Front-End .teclist > section ul li, main .fullRow #TecBody #Back-End .teclist > section ul li {
+  color: #818181;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+main .fullRow #TecBody #Front-End .teclist > section ul li::before, main .fullRow #TecBody #Back-End .teclist > section ul li::before {
+  content: "✔  ";
+  color: Green;
+}
+main .fullRow #TecBody #Front-End.disable, main .fullRow #TecBody #Back-End.disable {
+  width: 0;
+  visibility: hidden;
+}
+main .fullRow #TecBody #Front-End.disable h4, main .fullRow #TecBody #Back-End.disable h4 {
+  display: none;
+}
+main .fullRow #TecBody #Front-End.disable section, main .fullRow #TecBody #Back-End.disable section {
+  display: none;
+}
+main .fullRow #TecBody #Front-End.open, main .fullRow #TecBody #Back-End.open {
+  width: 100%;
+}
+main .fullRow #TecBody #Front-End.open .teclist, main .fullRow #TecBody #Back-End.open .teclist {
+  flex-direction: row;
+}
+main .fullRow #TecBody #Front-End.open .teclist > section, main .fullRow #TecBody #Back-End.open .teclist > section {
+  color: #e9872b;
+}
+main .fullRow #TecBody #Front-End.open .teclist > section ul, main .fullRow #TecBody #Back-End.open .teclist > section ul {
+  display: block;
+}
+main .fullRow #TecBody #Front-End.open .row.title, main .fullRow #TecBody #Back-End.open .row.title {
+  color: rgba(255, 255, 255, 0.8);
+}
+main .fullRow #TecBody #Front-End {
+  background-color: #283747;
+  left: 0;
+}
+main .fullRow #TecBody #Back-End {
+  background-color: #212F3C;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

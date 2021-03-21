@@ -29,6 +29,8 @@
     - DOM Manipulation
     - Data manipulation (I try)
 }
+
+
 - PHP {
     - Syntax
     - Mysql interaction (mysqli)
